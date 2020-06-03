@@ -1,3 +1,9 @@
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
 /* Filter */
 .portfolio .button {
   border: 0;
@@ -12,18 +18,10 @@
   font-size: 16px;
   line-height: 1.63;
   cursor: pointer;
+
+  /* transition-duration: 3s; */
 }
 
-.portfolio .button:focus,
-.portfolio .button:hover {
-  background-color: var(--accent-color);
-  color: var(--third-color);
-}
-/* Examples */
-.examples .link {
-  text-decoration: none;
-  display: block;
-}
 .portfolio .portfolio-title {
   display: none;
 }
@@ -34,10 +32,25 @@
 .portfolio-nav .item + .item {
   margin-left: 8px;
 }
+
+.portfolio .button:focus,
+.portfolio .button:hover {
+  background-color: var(--accent-color);
+  color: var(--third-color);
+  /* transition-duration: 1s; */
+}
+/* Examples */
+
 .examples {
   display: flex;
   flex-wrap: wrap;
   padding-top: 50px;
+}
+
+.examples .link {
+  text-decoration: none;
+  display: block;
+  outline: none;
 }
 
 .examples .item {
@@ -46,11 +59,11 @@
   margin-bottom: 30px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.examples .item:hover,
-.examples .item:focus {
+.examples-link:hover,
+.examples-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
@@ -131,7 +144,6 @@
   height: 100%;
   width: 100%;
   color: var(--third-color);
-  /* background-color: var(--accent-color); */
 
   font-size: 18px;
   line-height: 1.56;
@@ -139,12 +151,15 @@
   opacity: 0;
 }
 
-.examples .item:hover .description,
-.examples .item:focus .description {
+.examples-link:hover .description,
+.examples-link:focus .description {
   opacity: 1;
+  /* transition-duration: 1s; */
 }
 
-.examples .item:hover .product-thumb::before,
-.examples .item:focus .product-thumb::before {
+.examples-link:hover .product-thumb::before,
+.examples-link:focus .product-thumb::before {
   opacity: 1;
+  /* transition-duration: 1s;
+  transition-timing-function: ease-in-out; */
 }
