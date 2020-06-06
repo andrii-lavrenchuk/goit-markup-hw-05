@@ -251,11 +251,8 @@
   height: 20px;
 }
 
-.social-links .item-link:nth-last-child(-n + 4) {
-  margin-right: 10px;
-}
-.social-links .item-link:last-child {
-  margin-right: 0;
+.social-links .item-link + .item-link {
+  margin-left: 10px;
 }
 
 .social-link-icon:hover,
